@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketUZ - Internet do'kon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Market<span>UZ</span></h1>
+
+    <input type="text" id="search" placeholder="Mahsulot qidirish...">
+
+    <button onclick="showCart()">🛒 Savat (<span id="count">0</span>)</button>
+</header>
+
+<nav>
+    <a href="#" onclick="showAll()">Barchasi</a>
+    <a href="#" onclick="filterCategory('Telefon')">Telefonlar</a>
+    <a href="#" onclick="filterCategory('Kompyuter')">Kompyuterlar</a>
+    <a href="#" onclick="filterCategory('Kiyim')">Kiyimlar</a>
+    <a href="#" onclick="filterCategory('Texnika')">Texnika</a>
+</nav>
+
+<section class="banner">
+    <div>
+        <h2>Eng yaxshi mahsulotlar!</h2>
+        <p>Qulay narxlar va ajoyib chegirmalar</p>
+        <button onclick="showAll()">Xarid qilish</button>
+    </div>
+</section>
+
+<main>
+    <h2 id="title">Barcha mahsulotlar</h2>
+    <div id="products" class="products"></div>
+</main>
+
+<div id="cartBox" class="cart-box">
+    <div class="cart-content">
+        <button class="close" onclick="closeCart()">✕</button>
+        <h2>Savatim</h2>
+        <div id="cartItems"></div>
+        <h3 id="total">Jami: 0 so'm</h3>
+        <button onclick="order()">Buyurtma berish</button>
+    </div>
+</div>
+
+<footer>
+    <h2>MarketUZ</h2>
+    <p>Biz bilan xarid qilish yanada qulay!</p>
+    <p>© 2026 MarketUZ</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
